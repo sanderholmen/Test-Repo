@@ -103,27 +103,88 @@
 # hople()
 # hople()
 
-
-#Taking some more look at functions including while loop.
-def firstFunction():
-    if randomVariable2 == 1:
-        print('You typed "1"')
-    elif randomVariable2 == 2:
-        print('You typed "2"')
-    else:
-        print('You typed "3"')
-
-print('Type the number 1, 2 or 3!')
+#
+# #Taking a look at functions including while loop.
+# def firstFunction():
+#     if randomVariable2 == 1:
+#         print('You typed "1"')
+#     elif randomVariable2 == 2:
+#         print('You typed "2"')
+#     else:
+#         print('You typed "3"')
+#
+# print('Type the number 1, 2 or 3!')
+#
 # randomVariable2 = int(input())
-randomVariable2 = 'notasigned'
-randomVariable2 = int(input())
-if randomVariable2 == int(1) or randomVariable2 == int(2) or randomVariable2 == int(3):
-    firstFunction()
-else:
-    while randomVariable2 != int(1) or randomVariable2 != int(2) or randomVariable2 != int(3):
-        print('You did not type 1, 2 or 3!')
-        print('Please type 1, 2 or 3!')
-        randomVariable2 = int(input())
-        if randomVariable2 == int(1) or randomVariable2 == int(2) or randomVariable2 == int(3):
-            firstFunction()
-            break
+# if randomVariable2 == int(1) or randomVariable2 == int(2) or randomVariable2 == int(3):
+#     firstFunction()
+# else:
+#     while randomVariable2 != int(1) or randomVariable2 != int(2) or randomVariable2 != int(3):
+#         print('You did not type 1, 2 or 3!')
+#         print('Please type 1, 2 or 3!')
+#         randomVariable2 = int(input())
+#         if randomVariable2 == int(1) or randomVariable2 == int(2) or randomVariable2 == int(3):
+#             firstFunction()
+#             break
+
+
+
+# # Using a function in a simple math question to qoute the answer and using an if statement to decide which output to run.
+# def secondFunction():
+#     if randomVariable3 == int(4):
+#         print('That is correct, ' + str(int(randomVariable3)) + ' is the answer!')
+#     else:
+#         print('No, ' + str(int(randomVariable3)) + ' is not the correct answer!')
+#
+#
+# print('What is 2 + 2')
+# randomVariable3 = int(input())
+# if randomVariable3 == int(4): #You can see that both lines will be run, but the difference is the if statement inside "secondFunction"`s if statement.`
+#     secondFunction()
+# else:
+#     secondFunction()
+
+
+
+# #Calling a function with different argumetns.
+# print('Type 1, 2 or any other number!')
+# randomVariable4 = int(input())
+#
+# def thirdFunction(randomVariable4):# The word inside the parentheses is called a paramater. A parameter is a variable that an argument is stored in.
+#     print('This ' +  randomVariable4)
+#
+# if randomVariable4 == int(1):
+#     thirdFunction('parameter has a value of 1!')
+# elif randomVariable4 == int(2):
+#     thirdFunction('parameter has a value of 2!')
+# else:
+#     thirdFunction('parameter has a value of any other number you typed which in this case was ' + str(randomVariable4) + '!')
+
+
+# #Handeling errors and examples of treating a function as a "black box" when all you want is the output of a function.
+# def randomVariable5(divideBy):
+#     try:
+#         return 42 / divideBy
+#     except ZeroDivisionError:
+#         print('No, dont divide by zero my friend!')
+# #Since dividing by zero (notice the 3rd print statement) the program will output an error saying ZeroDivisionError: division by zero.
+# #To overcome this so that the program can continue, you can add in "try and "except"" statements.
+# print(randomVariable5(0))
+# print(randomVariable5(1))
+# print(randomVariable5(2))
+# print(int(randomVariable5(3)))
+# print(float(randomVariable5(5)))
+# print(int(randomVariable5(21)))
+
+#Taking another look at error handeling.
+#This program fixes this by using the try and except statements.
+print('Type a number, please!')
+myNumber = input()
+
+try:
+    if int(myNumber) > 5:
+        print('Thats a high number!')
+    else:
+        print('Thats a low number!')
+except ValueError:
+    print('You did not type in a number!')
