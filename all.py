@@ -184,6 +184,7 @@ else:
 
 #If you type anything other than integers (number) it will crash with the error message "ValueError: invalid literal for int() with base 10: 'as'".
 #This program fixes this by using the try and except statements.
+#This is a good example of the use of an input validation.
 print('Type a number, please!')
 randomVariable7 = input()
 
