@@ -1,3 +1,6 @@
+#This file is just a "sketching" file where I`ll write as I learn and move forward..
+
+
 #A quick look at the "wihle-statement.
 
 #Print out Hello, there! 5 times.
