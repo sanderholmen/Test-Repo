@@ -1,3 +1,6 @@
+#This "all.py" file contains most of what I`ve written in python while Im in my learning phase..
+
+
 #My first lines of code which are ofc quite uninteresting.
 print('Hello, Lets start off with you')
 
