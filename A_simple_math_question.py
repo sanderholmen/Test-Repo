@@ -1,6 +1,6 @@
 #Emil B.B.
 #Im doing some python excercises about flow control involving if, else, elif and while statements with some simple != & or operators.
-
+#A good example of flow control usage can be a math question that will give multiple outputs depending on the users input.
 
 #What is 2+2 my simple math question the sophisticated version.
 print('Hello, can you type you`r name in for me please?!')

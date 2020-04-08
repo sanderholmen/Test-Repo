@@ -156,7 +156,7 @@ else:
     thirdFunction('parameter has a value of any other number you typed which in this case was ' + str(randomVariable4) + '!')
 
 
-
+#Error handeling and how to work with it.
 #Handeling errors and examples of treating a function as a "black box" when all you want is the output of a function.
 def randomVariable5(divideBy):
     try:
@@ -220,6 +220,6 @@ for guessRemainingVariable in range(1, 7): #We set a range of 0 to 6 (not counti
         break #This condition would be met if your guess is correct. This takes us out of the "for" loop and move us on to the next block.
 
 if guessVariable1 == secretVariable1:
-    print('Your guess is correct, my friend. Congratulations!')
+    print('Your guess is correct, my friend. You used ' + str(int(guessVariable1)) + ' attempts. Congratulations!')
 else:
     print('You ran out of tries. The number was ' + str(secretVariable1) + '.. Good-bye!')
