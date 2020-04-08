@@ -246,3 +246,18 @@
 #     print('Your guess is correct, my friend. You used ' + str(int(guessVariable1)) + ' attempts. Congratulations!')
 # else:
 #     print('You ran out of tries. The number was ' + str(secretVariable1) + '.. Good-bye!')
+
+
+
+
+#Lists are an important part of programming. As the program grows, storing values in lists becomes more important.
+#Lets take a look at the list function.
+listVariableOne = ['carrot', 'potato', 'lettuce'] #We are using square brackets to assign the values that are separated by commas in the list.
+listVariableOne #Calling the listVariableOne will print out the whole list including the squarebrackets -> ['carrot', 'potato', 'lettuce'].
+listVariableOne[1] #We are calling the listVariableOne and asking for the position 1 "index" (remember that it starts counting from 0). This means that 0 = carrot, 1 = potato and 2 = lettuce.
+
+#We can also have lists containing lists. Lets take a look at lists of lists..
+listVariableTwo = [['norway','sweden','denmark'],['oslo','stockholm','copenhagen']] #The syntax is basically [[','],[',']]
+listVariableTwo #This will output: [['norway', 'sweden', 'denmark'], ['oslo', 'stockholm', 'copenhagen']]
+listVariableTwo [0] #While this will output: ['norway', 'sweden', 'denmark']
+listVariableTwo [0][2] #And this will output: 'denmark'
