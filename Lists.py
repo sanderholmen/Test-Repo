@@ -10,40 +10,88 @@
 #First we chose which list (country or city) then we chose item for example stockholm inside the city-list.
 
 
-listVariableTwo = [['norway','sweden','denmark'],['oslo','stockholm','copenhagen']] #The syntax is basically [[','],[',']]
-# listVariableTwo #This will output: [['norway', 'sweden', 'denmark'], ['oslo', 'stockholm', 'copenhagen']]
-# listVariableTwo [0] #While this will output: ['norway', 'sweden', 'denmark']
-# listVariableTwo [0][2] #And this will output: 'denmark'
 
-print('We have to lists. One containing countries and another containing cities..!')
-print('Chose wether you want to select the country-list or the city-list')
-print('0 = ' + str(listVariableTwo [0])) #This prints out the first list inside the listVariableTwo.
-print('1 = ' + str(listVariableTwo [1])) #This prints out the second list inside the listVariableTwo.
-print('Type 0 or 1') #Lets ask user to type 0 or 1.
-userInput1 = int(input()) #We store the value in this variable.
 
-#First function is chosing which list to view.
-if userInput1 == 0: #If 0 was typed, we run this block.
-    print(listVariableTwo[0]) #We print out the first list of the two.
-    listVariableTwo = listVariableTwo[0] #Now we also set the variable to only hold the first list before we move on to the next function.
-elif userInput1 == 1:#If 1 was typed, we run this block.
-    print(listVariableTwo[1]) #We print out the second list of the two.
-    listVariableTwo = listVariableTwo[1] #Now we also set the variable to only hold the second list before we move on to the next function.
-else:
-    print('You did not type 0 or 1..') #If the user is imbecile and dont understand the instruction to type 0 or 1, well then.....
 
-#The next function is chosing one item/value inside the selected list.
-print('0 = ' + str(listVariableTwo [0])) #This prints out the first item in the previously selected list previous
-print('1 = ' + str(listVariableTwo [1])) #This prints out the second item in the previously selected list previous
-print('2 = ' + str(listVariableTwo [2])) #This prints out the third item in the previously selected list previous
+# listVariableTwo = [['norway','sweden','denmark'],['oslo','stockholm','copenhagen']] #The syntax is basically [[','],[',']]
+# # listVariableTwo #This will output: [['norway', 'sweden', 'denmark'], ['oslo', 'stockholm', 'copenhagen']]
+# # listVariableTwo [0] #While this will output: ['norway', 'sweden', 'denmark']
+# # listVariableTwo [0][2] #And this will output: 'denmark'
+#
+# print('We have two lists. One containing countries and another containing cities..!')
+# print('Chose wether you want to select the country-list or the city-list')
+# print('0 = ' + str(listVariableTwo [0])) #This prints out the first list inside the listVariableTwo.
+# print('1 = ' + str(listVariableTwo [1])) #This prints out the second list inside the listVariableTwo.
+# print('Type 0 or 1') #Lets ask user to type 0 or 1.
+# userInput1 = int(input()) #We store the value in this variable.
+#
+# #First function is chosing which list to view.
+# if userInput1 == 0: #If 0 was typed, we run this block.
+#     print(listVariableTwo[0]) #We print out the first list of the two.
+#     listVariableTwo = listVariableTwo[0] #Now we also set the variable to only hold the first list before we move on to the next function.
+# elif userInput1 == 1:#If 1 was typed, we run this block.
+#     print(listVariableTwo[1]) #We print out the second list of the two.
+#     listVariableTwo = listVariableTwo[1] #Now we also set the variable to only hold the second list before we move on to the next function.
+# else:
+#     print('You did not type 0 or 1..') #If the user is imbecile and dont understand the instruction to type 0 or 1, well then.....
+#
+# #The next function is chosing one item/value inside the selected list.
+# print('0 = ' + str(listVariableTwo [0])) #This prints out the first item in the previously selected list previous
+# print('1 = ' + str(listVariableTwo [1])) #This prints out the second item in the previously selected list previous
+# print('2 = ' + str(listVariableTwo [2])) #This prints out the third item in the previously selected list previous
+#
+# print('Type 0, 1 or 2 to select item')
+# userInput2 = int(input())
+# if userInput2 == 0: #If 0 was typed, we run this block.
+#     print(listVariableTwo[0]) #We print out the first item in the list.
+# elif userInput2 == 1: #If 1 was typed, we run this block.
+#     print(listVariableTwo[1]) #We print out the second item in the list.
+# elif userInput2 == 2: #If 2 was typed, we run this block.
+#     print(listVariableTwo[2]) #We print out the third item in the list.
+# else:
+#     print('You did not type 0,1 or 2..') #If the user is imbecile and dont understand the instruction to type 0, 1 or 2; well then.....
 
-print('Type 0, 1 or 2 to select item')
-userInput2 = int(input())
-if userInput2 == 0: #If 0 was typed, we run this block.
-    print(listVariableTwo[0]) #We print out the first item in the list.
-elif userInput2 == 1: #If 1 was typed, we run this block.
-    print(listVariableTwo[1]) #We print out the second item in the list.
-elif userInput2 == 2: #If 2 was typed, we run this block.
-    print(listVariableTwo[2]) #We print out the third item in the list.
-else:
-    print('You did not type 0,1 or 2..') #If the user is imbecile and dont understand the instruction to type 0, 1 or 2; well then.....
+
+
+
+#We can also refer to inddexes (items) in a list by using a negativ number, for example -> [-1].
+#[-1] will refer to the last item.
+#[-2] will refer to the second last.
+#[-3] third last and so on..
+
+#If we want to select multiple items (slices) we can do as such:
+#If we assigned listVariableTwo = ['norway','sweden','denmark']
+#listVariableTwo [0:2] will print out ['norway', 'sweden'] since we start from 0 and print out position 0 - 1 = length of list items 2.
+#We can also do listVariableTwo [1:3] and it will print out ['sweden', 'denmark'].
+
+################################################################################
+#Qoute Al_Sweigart: Automate the Boring stuff with Python.
+# As a shortcut, you can leave out one or both of the indexes on either side
+# of the colon in the slice. Leaving out the first index is the same as using 0 ,
+# or the beginning of the list. Leaving out the second index is the same as
+# using the length of the list, which will slice to the end of the list. Enter the
+# following into the interactive shell:
+    # >>> spam = ['cat', 'bat', 'rat', 'elephant']
+    # >>> spam[0:4]
+    # ['cat', 'bat', 'rat', 'elephant']
+    # >>> spam[1:3]
+    # ['bat', 'rat']
+    # >>> spam[0:-1]
+    # ['cat', 'bat', 'rat']
+    #>>> spam[:]
+    #['cat', 'bat', 'rat', 'elephant']
+################################################################################
+
+#Update the list through user input can also be done.
+#Lets look at changing an index (item) inside a list.
+listVariableThree = ['first_record','second_record','third_record']
+print('We have ' + str(listVariableThree) + ' in this list!')
+print('Write down the name of the item that you want stored in the first_record!')
+listVariableThree[0] = str(input())
+
+print('Thanks, I have now stored ' + str(listVariableThree[0]) + 'in your first_record')
+print('Your list now contains ' + str(listVariableThree))
+print('Now tell me what the other two items would be in the second_record and third_record')
+print('Type the first item and then press enter, then the second item followed by another enter!')
+listVariableThree[1:3] = str(input()) + str(input())
+print('Your list now contains ' + str(listVariableThree) + '. Thanks for stopping by!')
