@@ -113,36 +113,67 @@
 
 #Almost forgot... we should also be able to delete records!
 #For deleting we use the del statement.
-#Ill also add some other functions that I`ve learned so far (try and while loop) to make this more sophisticated.
-listVariableSeven = ['emil','jan','thomas'] #We prelist 3 indexes (items).
-print('Type 1, 2 ,3 or 4 and then press enter to delete a name!')
-print('1 = ' + listVariableSeven[0])
-print('2 = ' + listVariableSeven[1])
-print('3 = ' + listVariableSeven[2])
-print('4 = cancel') #We add a cancel option so that the user can cancel out and not be forced to delete a record.
-delListSeven = 4 #We just set the variable that we will input to a value that will trigger the while loop.
-while delListSeven != 4 or delListSeven != 3 or delListSeven != 2 or delListSeven != 1: #Since our variable is not 1, 2, 3 or 4 (since it is preset to 5) the while loop triggers.
-    try: #try statement lets the program try. This means essentially that if user input throws an error which in this case if we type characters since we spesifically ask for integer (notice the int(input()) we can set an action for that specific error.
-        delListSeven = int(input()) #Remember that we need an int before the input() statement so that the if function works when equal input number.
-        if delListSeven == 1 or delListSeven == 2 or delListSeven == 3 or delListSeven == 4: #We break out only if the value we type in is 1, 2, 3 or 4.
-            break
-        else:
-            print('Wrong number selection!')
-            print('Try again..!')
-            print('Select 1, 2, 3 or 4 then hit enter..')
-            continue
-    except ValueError: #This is the error exception. We run the lines under if the line under the "try" statement will give us the ValueError which it will if we type in characters.
-        print('Dont type characters!')
-        print('Try again..!')
-        print('Select 1, 2, 3 or 4 then hit enter..')
-        continue #We jump back to the "try" statement using this continue statement.
-#The lines under are ran depending on which input made it through the while loop.
-if delListSeven == 1:
-    del listVariableSeven[0]
-elif delListSeven == 2:
-    del listVariableSeven[1]
-elif delListSeven == 3:
-    del listVariableSeven[2]
-else:
-    print('Your list was unchanged..!')
-print('Your list now looks like this ' + '"' + str(listVariableSeven) + '".')
+#I`ll also add some other functions that I`ve learned so far (try and while loop) to make this more sophisticated.
+# listVariableSeven = ['emil','jan','thomas'] #We prelist 3 indexes (items).
+# print('Type 1, 2 ,3 or 4 and then press enter to delete a name!')
+# print('1 = ' + listVariableSeven[0])
+# print('2 = ' + listVariableSeven[1])
+# print('3 = ' + listVariableSeven[2])
+# print('4 = cancel') #We add a cancel option so that the user can cancel out and not be forced to delete a record.
+# delListSeven = 4 #We just set the variable that we will input to a value that will trigger the while loop.
+# while delListSeven != 4 or delListSeven != 3 or delListSeven != 2 or delListSeven != 1: #Since our variable is not 1, 2, 3 or 4 (since it is preset to 5) the while loop triggers.
+#     try: #try statement lets the program try. This means essentially that if user input throws an error which in this case if we type characters since we spesifically ask for integer (notice the int(input()) we can set an action for that specific error.
+#         delListSeven = int(input()) #Remember that we need an int before the input() statement so that the if function works when equal input number.
+#         if delListSeven == 1 or delListSeven == 2 or delListSeven == 3 or delListSeven == 4: #We break out only if the value we type in is 1, 2, 3 or 4.
+#             break
+#         else:
+#             print('Wrong number selection!')
+#             print('Try again..!')
+#             print('Select 1, 2, 3 or 4 then hit enter..')
+#             continue
+#     except ValueError: #This is the error exception. We run the lines under if the line under the "try" statement will give us the ValueError which it will if we type in characters.
+#         print('Dont type characters!')
+#         print('Try again..!')
+#         print('Select 1, 2, 3 or 4 then hit enter..')
+#         continue #We jump back to the "try" statement using this continue statement.
+# #The lines under are ran depending on which input made it through the while loop.
+# if delListSeven == 1:
+#     del listVariableSeven[0]
+# elif delListSeven == 2:
+#     del listVariableSeven[1]
+# elif delListSeven == 3:
+#     del listVariableSeven[2]
+# else:
+#     print('Your list was unchanged..!')
+# print('Your list now looks like this ' + '"' + str(listVariableSeven) + '".')
+
+
+
+
+
+#list() function returns a list form of values you pass to it.
+#An example...
+#list('Hello') #This will list every letter in its own index and print it out like this:
+#list('Hello')
+#['H', 'e', 'l', 'l', 'o']
+
+
+#Giving the list a name and putting multiple values into the list:
+myEmployees = [] #This is an empty list called myEmployees.
+while True:
+    print('Name of employee ' + str(len(myEmployees) +1) + ' (enter nothing to stop!):')
+    employeeName = input()
+    if employeeName == '':
+        break
+    myEmployees = myEmployees + [employeeName] #We concatenate the list.
+print('The employees names are:')
+for employeeName in myEmployees:
+    print(' ' + employeeName)
+while True: #We dont really need this while loop, but in this case it does not seem to introduce any errors or bugs.
+    if 'emil' in myEmployees: #Runs line under if emil is in the list.
+        print('Yes, emil is here')
+        break
+    elif 'emil' not in myEmployees: #Runs line under if emil is not listed.
+        print('emil is not listed')
+        break
+print('Done')
