@@ -10,9 +10,6 @@
 #First we chose which list (country or city) then we chose item for example stockholm inside the city-list.
 
 
-
-
-
 # listVariableTwo = [['norway','sweden','denmark'],['oslo','stockholm','copenhagen']] #The syntax is basically [[','],[',']]
 # # listVariableTwo #This will output: [['norway', 'sweden', 'denmark'], ['oslo', 'stockholm', 'copenhagen']]
 # # listVariableTwo [0] #While this will output: ['norway', 'sweden', 'denmark']
@@ -82,16 +79,70 @@
     #['cat', 'bat', 'rat', 'elephant']
 ################################################################################
 
-#Update the list through user input can also be done.
-#Lets look at changing an index (item) inside a list.
-listVariableThree = ['first_record','second_record','third_record']
-print('We have ' + str(listVariableThree) + ' in this list!')
-print('Write down the name of the item that you want stored in the first_record!')
-listVariableThree[0] = str(input())
+# #Update the list through user input can also be done.
+# #Lets look at changing an index (item) inside a list.
+# listVariableThree = ['first_record','second_record','third_record']
+# print('We have ' + str(listVariableThree) + ' in this list!')
+# print('Write down the name of the item that you want stored in the first_record!')
+# listVariableThree[0] = str(input()) #Using input() function and set listVariableThree[0] changes the first_record (notice the [0] after the variable).
+#
+# print('Thanks, I have now stored ' + str(listVariableThree[0]) + 'in your first_record')
+# print('Your list now contains ' + str(listVariableThree))
+# print('Now tell me what the other two items would be in the second_record and third_record')
+# print('Type the first item and then press enter, then the second item followed by another enter!')
+# listVariableThree[1:3] = str(input()) + str(input()) #We change two indexes by using two input() function separated with a "+". Also notice the [1:3] (starts at 1 which is the second record and counts up to but not including 3).
+# print('Your list now contains ' + str(listVariableThree) + '. Thanks for stopping by!')
 
-print('Thanks, I have now stored ' + str(listVariableThree[0]) + 'in your first_record')
-print('Your list now contains ' + str(listVariableThree))
-print('Now tell me what the other two items would be in the second_record and third_record')
-print('Type the first item and then press enter, then the second item followed by another enter!')
-listVariableThree[1:3] = str(input()) + str(input())
-print('Your list now contains ' + str(listVariableThree) + '. Thanks for stopping by!')
+
+# #Lets see how we can find the length of a list.
+# #The len() function counts letter, indexes etc and can be used in this case.
+# listVariableFour = ['monitor','speakers','display','keyboard','mouse','microphone','gamepad']
+# print(len(listVariableFour)) #We put the len() function inside a print() function so that it prints out the length of the list -> in this case the total amount of values (indexes).
+
+
+
+#Combining lists is also possible.
+# #The + operator can combine lists the same way it combines strings (string concatenation).
+# listVariableFive = ['one','two','three']
+# listVariableSix = [1,2,3]
+# print((listVariableFive)+(listVariableSix)) #This prints out both lists.
+# #Lets count the length of both..
+# print(len((listVariableFive)+(listVariableSix))) #We count all the items listet.
+
+
+
+#Almost forgot... we should also be able to delete records!
+#For deleting we use the del statement.
+#Ill also add some other functions that I`ve learned so far (try and while loop) to make this more sophisticated.
+listVariableSeven = ['emil','jan','thomas'] #We prelist 3 indexes (items).
+print('Type 1, 2 ,3 or 4 and then press enter to delete a name!')
+print('1 = ' + listVariableSeven[0])
+print('2 = ' + listVariableSeven[1])
+print('3 = ' + listVariableSeven[2])
+print('4 = cancel') #We add a cancel option so that the user can cancel out and not be forced to delete a record.
+delListSeven = 4 #We just set the variable that we will input to a value that will trigger the while loop.
+while delListSeven != 4 or delListSeven != 3 or delListSeven != 2 or delListSeven != 1: #Since our variable is not 1, 2, 3 or 4 (since it is preset to 5) the while loop triggers.
+    try: #try statement lets the program try. This means essentially that if user input throws an error which in this case if we type characters since we spesifically ask for integer (notice the int(input()) we can set an action for that specific error.
+        delListSeven = int(input()) #Remember that we need an int before the input() statement so that the if function works when equal input number.
+        if delListSeven == 1 or delListSeven == 2 or delListSeven == 3 or delListSeven == 4: #We break out only if the value we type in is 1, 2, 3 or 4.
+            break
+        else:
+            print('Wrong number selection!')
+            print('Try again..!')
+            print('Select 1, 2, 3 or 4 then hit enter..')
+            continue
+    except ValueError: #This is the error exception. We run the lines under if the line under the "try" statement will give us the ValueError which it will if we type in characters.
+        print('Dont type characters!')
+        print('Try again..!')
+        print('Select 1, 2, 3 or 4 then hit enter..')
+        continue #We jump back to the "try" statement using this continue statement.
+#The lines under are ran depending on which input made it through the while loop.
+if delListSeven == 1:
+    del listVariableSeven[0]
+elif delListSeven == 2:
+    del listVariableSeven[1]
+elif delListSeven == 3:
+    del listVariableSeven[2]
+else:
+    print('Your list was unchanged..!')
+print('Your list now looks like this ' + '"' + str(listVariableSeven) + '".')

@@ -166,7 +166,7 @@ def randomVariable5(divideBy):
         return 42 / divideBy
     except ZeroDivisionError:
         print('No, dont divide by zero my friend!')
-#Since dividing by zero (notice the 3rd print statement) the program will output an error saying ZeroDivisionError: division by zero.
+#Since dividing by zero prints an error message, notice the first print statement (0); the program will output an error saying ZeroDivisionError: division by zero.
 #To overcome this so that the program can continue, you can add in "try and "except"" statements.
 print(randomVariable5(0))
 print(randomVariable5(1))
@@ -285,3 +285,12 @@ print('Now tell me what the other two items would be in the second_record and th
 print('Type the first item and then press enter, then the second item followed by another enter!')
 listVariableThree[1:3] = str(input()) + str(input())
 print('Your list now contains ' + str(listVariableThree) + '. Thanks for stopping by!')
+
+
+
+
+
+#Lets see how we can find the length of a list.
+#The len() function counts letter, indexes etc and can be used in this case.
+listVariableFour = ['monitor','speakers','display','keyboard','mouse','microphone','gamepad']
+print(len(listVariableFour)) #We put the len() function inside a print() function so that it prints out the length of the list -> in this case the total amount of values (indexes).

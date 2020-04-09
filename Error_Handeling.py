@@ -5,7 +5,7 @@ def randomVariable5(divideBy):
         return 42 / divideBy
     except ZeroDivisionError:
         print('No, dont divide by zero my friend!')
-#Since dividing by zero (notice the 3rd print statement) the program will output an error saying ZeroDivisionError: division by zero.
+#Since dividing by zero prints an error message, notice the first print statement (0); the program will output an error saying ZeroDivisionError: division by zero.
 #To overcome this so that the program can continue, you can add in "try and "except"" statements.
 print(randomVariable5(0))
 print(randomVariable5(1))
