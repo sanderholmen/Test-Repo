@@ -167,9 +167,9 @@ while True:
         break
     myEmployees = myEmployees + [employeeName] #We concatenate the list.
 print('The employees names are:')
-for employeeName in myEmployees:
+for employeeName in myEmployees: #The line under will run for any item/value/index in the list myEmployees.
     print(' ' + employeeName)
-while True: #We dont really need this while loop, but in this case it does not seem to introduce any errors or bugs.
+while True: #We dont really need this while loop, but in this case it does not seem to introduce any errors or bugs, so why not for learning sake..
     if 'emil' in myEmployees: #Runs line under if emil is in the list.
         print('Yes, emil is here')
         break
