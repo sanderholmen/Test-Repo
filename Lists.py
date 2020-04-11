@@ -206,18 +206,28 @@
 # carVariable *= 3
 
 
-#Find the index position and or return a ValueError with the index() method.
-#Syntax = thelistvariable.index('indexname')
-foodVariable = ['pizza','taco','salomon','chicken','spaghetti']
-foodVariable.index('pizza') #This will return 0 becuase pizza is the first index.
-foodVariable.index('pancake') #This will return:
-# Traceback (most recent call last):
-#   File "<stdin>", line 1, in <module>
-# ValueError: 'pancake' is not in list
+# List Methods...
+# #Find the index position and or return a ValueError with the index() method.
+# #Syntax = thelistvariable.index('indexname')
+# foodVariable = ['pizza','taco','salomon','chicken','spaghetti']
+# foodVariable.index('pizza') #This will return 0 becuase pizza is the first index.
+# foodVariable.index('pancake') #This will return:
+# # Traceback (most recent call last):
+# #   File "<stdin>", line 1, in <module>
+# # ValueError: 'pancake' is not in list
+#
+# #Adding (appending) an item to the list and/or inserting an item. Syntax = variable.append('item').
+# foodVariable.append('pancake') #This will add 'pancale' as in the last index.
+# foodVariable.index('pancake') #This will now return the number for the last item in the list which is 5.
+# foodVariable.insert(2,'lamb') #This will add 'lamb' in the third [2] 0,1,2 record and bump the rest of the items up 1 step.
+# #Removing with the remove() list methond. Syntax = variable.remove('item').
+# #Just like using "del variable[0]"" for deleting index item 0, we can use the remove() function.
+# foodVariable.remove('pizza') #This will delete the record by typing in the name instead of index number. Keep in mind that if you have pizza stored twice or more, it will only remove the first item in the list.
 
-#Adding (appending) an item to the list and/or inserting an item. Syntax = variable.append('item').
-foodVariable.append('pancake') #This will add 'pancale' as in the last index.
-foodVariable.index('pancake') #This will now return the number for the last item in the list which is 5.
-foodVariable.insert(2,'lamb') #This will add 'lamb' in the third [2] 0,1,2 record and bump the rest of the items up 1 step.
-#Removing with the remove() list methond. Syntax = variable.remove('item').
-foodVariable.remove('pizza')
+#For a list of numbers we can use the sort() method to sort them.
+listVariableTen = [15,-35,75,47,12,-12,-63,-1,-2,73,12,-35]
+listVariableTen.sort() #If we do a print(listVariableTen) we will see that this list is sorted from lowest to highest number.
+#This also works for alphabetical order.
+listVariableEleven = ['plane','boat','car','train','submarine']
+listVariableEleven.sort() #When printing out the list it will output -> ['boat', 'car', 'plane', 'submarine', 'train']
+listVariableEleven.sort(reverse=True) #This sorts it the opposite way. -> ['train', 'submarine', 'plane', 'car', 'boat']
