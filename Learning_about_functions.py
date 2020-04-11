@@ -1,6 +1,6 @@
 #Functions are an important part of programming. Regardless of language, you will see this as a core part of software developement.
 
-#Looking at the "for" function -> variable ->  with the "in range" function.
+#Looking at the "for x in range" function.
 print('I want apples!')
 for aWeirdVariable1 in range (5): #This will run the next code 5 times and each time its ran it will be adding an incremental values raning from 0-4 in the aWeirdVariable1.
     if aWeirdVariable1 == 0: #We skip the first value as this is 0 and it does not make sense to the context. Notice the continue statement under.

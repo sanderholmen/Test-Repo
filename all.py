@@ -85,7 +85,7 @@ while userPassword1 != '123':
 print('You are now signed in, my friend!')
 
 
-#Looking at the "for" variable. with the "in range" function.
+#Looking at the "for x in range" function.
 print('I want apples!')
 for aWeirdVariable1 in range (5): #This will run the next code 5 times and each time its ran it will be adding an incremental values raning from 0-4 in the aWeirdVariable1.
     if aWeirdVariable1 == 0: #We skip the first value as this is 0 and it does not make sense to the context. Notice the continue statement under.
@@ -337,7 +337,7 @@ print('Your list now looks like this ' + '"' + str(listVariableSeven) + '".')
 
 
 
-
+#Write records to list.
 #Giving the list a name and putting multiple values into the list:
 myEmployees = [] #This is an empty list called myEmployees.
 while True:
@@ -351,9 +351,32 @@ for employeeName in myEmployees: #The line under will run for any item/value/ind
     print(' ' + employeeName)
 while True: #We dont really need this while loop, but in this case it does not seem to introduce any errors or bugs, so why not for learning sake..
     if 'emil' in myEmployees: #Runs line under if emil is in the list.
-        print('Yes, emil is here')
+        print('Yes, emil is listed here!')
         break
     elif 'emil' not in myEmployees: #Runs line under if emil is not listed.
-        print('emil is not listed')
+        print('emil is not listed here!')
         break
-print('Done')
+print('Done!')
+
+
+#We can also use the list() function to list all numbers in the range() function.
+#Say for example that we have range (0,10,2) 0 - 10 and 2 increments.
+list(range(-10,12,3)) #This will print out numbers from -10 to 11 (not counting 12) with an increment of 3. -> [-10, -7, -4, -1, 2, 5, 8, 11]
+#Lets put it in a variable..
+listVariableEight = list(range(-10,12,3))
+print(listVariableEight)
+
+
+#Lets organize the stuff in a list using the for in range function.
+listVariableNine = ['phone','laptop','wallet','glasses'] #A list of my stuff..
+for rangeVariable1 in range(len(listVariableNine)): #Notice that we put a len() function inside the for in range() statement. This will print out the number/order of all items in list.
+    print('Item ' + str(rangeVariable1) + ' in my list off stuff is: ' + listVariableNine[rangeVariable1]) #Notice that since we concatenate a string in the print statement, we have to put str(rangeVariable1) because the in range variable contains only integers.
+
+
+#We can do a "database" like scheme for our list by giving a name-variable to each index.
+carVariable = ['audi','yellow','2004'] #First we assign the list to a a variable..
+brand, colour, year = carVariable #Then we give names to the items in relation to where they are stored; audi is in index 0 so we put brand first, then yellow which corresponds to the 2nd value = index 1 and so forth..  )
+#We can also do this in one line..
+brand, colour, year = 'honda','red','2009'
+#To see if something is in the list we can use in or not in.
+'honda' in carVariable #If honda is found in any of the indexes it will return "True", if not; it will return "False".

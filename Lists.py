@@ -157,23 +157,67 @@
 #list('Hello')
 #['H', 'e', 'l', 'l', 'o']
 
+#Write records to list.
+# #Giving the list a name and putting multiple values into the list:
+# myEmployees = [] #This is an empty list called myEmployees.
+# while True:
+#     print('Name of employee ' + str(len(myEmployees) +1) + ' (enter nothing to stop!):')
+#     employeeName = input()
+#     if employeeName == '':
+#         break
+#     myEmployees = myEmployees + [employeeName] #We concatenate the list.
+# print('The employees names are:')
+# for employeeName in myEmployees: #The line under will run for any item/value/index in the list myEmployees.
+#     print(' ' + employeeName)
+# while True: #We dont really need this while loop, but in this case it does not seem to introduce any errors or bugs, so why not for learning sake..
+#     if 'emil' in myEmployees: #Runs line under if emil is in the list.
+#         print('Yes, emil is listed here!')
+#         break
+#     elif 'emil' not in myEmployees: #Runs line under if emil is not listed.
+#         print('emil is not listed here!')
+#         break
+# print('Done')
 
-#Giving the list a name and putting multiple values into the list:
-myEmployees = [] #This is an empty list called myEmployees.
-while True:
-    print('Name of employee ' + str(len(myEmployees) +1) + ' (enter nothing to stop!):')
-    employeeName = input()
-    if employeeName == '':
-        break
-    myEmployees = myEmployees + [employeeName] #We concatenate the list.
-print('The employees names are:')
-for employeeName in myEmployees: #The line under will run for any item/value/index in the list myEmployees.
-    print(' ' + employeeName)
-while True: #We dont really need this while loop, but in this case it does not seem to introduce any errors or bugs, so why not for learning sake..
-    if 'emil' in myEmployees: #Runs line under if emil is in the list.
-        print('Yes, emil is here')
-        break
-    elif 'emil' not in myEmployees: #Runs line under if emil is not listed.
-        print('emil is not listed')
-        break
-print('Done')
+
+# #We can also use the list() function to list all numbers in the range() function.
+# #Say for example that we have range (0,10,2) 0 - 10 and 2 increments.
+# list(range(-10,12,3)) #This will print out numbers from -10 to 11 (not counting 12) with an increment of 3. -> [-10, -7, -4, -1, 2, 5, 8, 11]
+# #Lets put it in a variable..
+# listVariableEight = list(range(-10,12,3))
+# print(listVariableEight)
+
+#
+# #Lets organize the stuff in a list using the for in range function.
+# listVariableNine = ['phone','laptop','wallet','glasses'] #A list of my stuff..
+# for rangeVariable1 in range(len(listVariableNine)): #Notice that we put a len() function inside the for in range() statement. This will print out the number/order of all items in list.
+#     print('Item ' + str(rangeVariable1) + ' in my list off stuff is: ' + listVariableNine[rangeVariable1]) #Notice that since we concatenate a string in the print statement, we have to put str(rangeVariable1) because the in range variable contains only integers.
+
+
+
+
+# #We can do a "database" like scheme for our list by giving a name-variable to each index.
+# carVariable = ['audi','yellow','2004'] #First we assign the list to a a variable..
+# brand, colour, year = carVariable #Then we give names to the items in relation to where they are stored; audi is in index 0 so we put brand first, then yellow which corresponds to the 2nd value = index 1 and so forth..  )
+# #We can also do this in one line..
+# brand, colour, year = 'honda','red','2009'
+# #To see if something is in the list we can use in or not in.
+# 'honda' in carVariable #If honda is found in any of the indexes it will return "True", if not; it will return "False".
+# #Multiply values in list:
+# carVariable *= 3
+
+
+#Find the index position and or return a ValueError with the index() method.
+#Syntax = thelistvariable.index('indexname')
+foodVariable = ['pizza','taco','salomon','chicken','spaghetti']
+foodVariable.index('pizza') #This will return 0 becuase pizza is the first index.
+foodVariable.index('pancake') #This will return:
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# ValueError: 'pancake' is not in list
+
+#Adding (appending) an item to the list and/or inserting an item. Syntax = variable.append('item').
+foodVariable.append('pancake') #This will add 'pancale' as in the last index.
+foodVariable.index('pancake') #This will now return the number for the last item in the list which is 5.
+foodVariable.insert(2,'lamb') #This will add 'lamb' in the third [2] 0,1,2 record and bump the rest of the items up 1 step.
+#Removing with the remove() list methond. Syntax = variable.remove('item').
+foodVariable.remove('pizza')
