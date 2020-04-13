@@ -32,3 +32,18 @@ for 'size' in dictionaryVar1:
         print('Yeah, dude!')
     else:
         print('What happened?')
+
+#Listing keys, values and items from the dictionary under:
+>>>dictionaryVar2 = {
+'name':'emil',
+'age': '30',
+'sex': 'male',
+}
+#Listing the keys (the preset datatype in the dictionary) in dictionary using list():
+>>>list(dictionaryVar2.keys())
+['name', 'age', 'sex']
+#Listing the values in the dictionary using list():
+>>>list(dictionaryVar2.values())
+['emil', '30', 'male']
+>>>list(dictionaryVar2.items())
+[('name', 'emil'), ('age', '30'), ('sex', 'male')]
