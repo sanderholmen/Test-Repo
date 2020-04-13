@@ -72,3 +72,20 @@ elif randomVariable4 == int(2):
     thirdFunction('parameter has a value of 2!')
 else:
     thirdFunction('parameter has a value of any other number you typed which in this case was ' + str(randomVariable4) + '!')
+
+
+#Another example of function with different arguments.
+def fourthFunction1(varArgument): #varArgument is the functions parameter that stores the argument.
+    varArgument.append('Hi!') #This gets store into the varArgument.
+    varArgument.append('Hola!') #This gets store into the varArgument.
+    # print(varArgument)
+
+#This is = fourthFunction1(['hello','how,','are','you'])
+testVar2 = ['hello','how,','are','you'] #Putting the values into a list using the square brackets.
+fourthFunction1(testVar2) #Calls fourthFunction1 but with the testVar2 variable meaning that it calls the function that with its return value it appends the 'Hi!' and "Hola!" into the already existing testVar2 variable.
+
+testVar3 = ['yo','whats,','up','dude'] #Putting the values into a list using the square brackets.
+fourthFunction1(testVar3) #Calls fourthFunction1 but with the testVar3 variable meaning that it calls the function that with its return value it appends the 'Hi!' and "Hola!" into the already existing testVar3 variable.
+
+print(testVar2)
+print(testVar3)

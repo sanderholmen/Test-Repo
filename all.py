@@ -380,3 +380,93 @@ brand, colour, year = carVariable #Then we give names to the items in relation t
 brand, colour, year = 'honda','red','2009'
 #To see if something is in the list we can use in or not in.
 'honda' in carVariable #If honda is found in any of the indexes it will return "True", if not; it will return "False".
+
+# List Methods...
+#Find the index position and or return a ValueError with the index() method.
+#Syntax = thelistvariable.index('indexname')
+foodVariable = ['pizza','taco','salomon','chicken','spaghetti']
+foodVariable.index('pizza') #This will return 0 becuase pizza is the first index.
+foodVariable.index('pancake') #This will return:
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# ValueError: 'pancake' is not in list
+
+#Adding (appending) an item to the list and/or inserting an item. Syntax = variable.append('item').
+foodVariable.append('pancake') #This will add 'pancale' as in the last index.
+foodVariable.index('pancake') #This will now return the number for the last item in the list which is 5.
+foodVariable.insert(2,'lamb') #This will add 'lamb' in the third [2] 0,1,2 record and bump the rest of the items up 1 step.
+#Removing with the remove() list methond. Syntax = variable.remove('item').
+#Just like using "del variable[0]"" for deleting index item 0, we can use the remove() function.
+foodVariable.remove('pizza') #This will delete the record by typing in the name instead of index number. Keep in mind that if you have pizza stored twice or more, it will only remove the first item in the list.
+
+
+#For a list of numbers we can use the sort() method to sort them.
+listVariableTen = [15,-35,75,47,12,-12,-63,-1,-2,73,12,-35]
+listVariableTen.sort() #If we do a print(listVariableTen) we will see that this list is sorted from lowest to highest number.
+#This also works for alphabetical order (or ASCII-betical order since upper case characters will come before lower case characters).
+listVariableEleven = ['plane','boat','car','train','submarine']
+listVariableEleven.sort() #When printing out the list it will output -> ['boat', 'car', 'plane', 'submarine', 'train']
+listVariableEleven.sort(reverse=True) #This sorts it the opposite way. -> ['train', 'submarine', 'plane', 'car', 'boat']
+#Remember that lists with numbers and characters can`t be sorted. It will throw out an unordable types error.
+#Taking a look at the upper and lower characters in the list.
+listVariableEleven = ['Plane','boat','Car','Train','submarine','motorbike','thanks','Spaceshuttle'] #It will output -> ['Car', 'Plane', 'Spaceshuttle', 'Train', 'boat', 'motorbike', 'submarine', 'thanks']
+#For true alphabetical order we have to convert the upper case characters to lowercase.
+listVariableEleven.sort(key=str.lower) #Now we have -> ['boat', 'Car', 'motorbike', 'Plane', 'Spaceshuttle', 'submarine', 'thanks', 'Train']
+
+
+#Get a random value from the list. A magic 8 ball program.
+import random #We need to import the random module.
+#We store the list in randomVariable9.
+randomVariable8 = [
+'1',
+'2',
+'3',
+'4',
+'5',
+'6',
+'7',
+'8',
+]
+randomVariable9 = int(randomVariable8[random.randint(0,len(randomVariable8)-1)]) #We store one random item from the list in randomVariable9.
+if randomVariable9 == int(1):
+    print('Today I`m having ' + str(int(randomVariable9)) + ' slice of pizza for dinner')
+else:
+    print('Today I`m having ' + str(int(randomVariable9)) + ' slices of pizza for dinner')
+
+
+#A list and a string is basically the same if you consider the fact that every letter in a string has its own index. We can see this by passing a string inside a list() function.
+list('Hello!') #This will print out: ['H', 'e', 'l', 'l', 'o', '!'] in a python shell.
+#What can be done with lists can often also be done with strings.
+listVariableTen = 'Hello!'
+listVariableTen[0] #This will print out: 'H' (the first character in the variable).
+listVariableTen[1:4] #This will print out: 'ell' ([1:4] means index 1 to 4 not counting 4 or the first one since it starts counting from 0).
+listVariableTen[-2] #This will print out: 'o' ([-2] means counting backwards 2 steps from the last index).
+#The one difference is that a string cannot be changed. They are immutable..
+listVariableTen[3] = 'p' #This will throw out a TypeError: 'str' object does not support item assignment
+#The right way to modify a string is to create a new string by using 'slices' then store it as a new variable. -> a slice looks like this: variablename[0:10].
+listVariableEleven = 'Emil is a nerd!'
+modifiedlistVariableEleven = listVariableEleven[0:10] + 'proffessional' + listVariableEleven[9:15] #listVariableEleven[0:10] = "Emil is a " listVariableEleven[9:15] = " nerd!". [0:10] is a slice..
+
+
+
+#Taking a look at the copy.deepcopy() function.
+#Until now we`ve been looking at ways to reference lists and not really copying them to have a complete seperate list.
+#We can import the copy module to do this.
+import copy #Import the copy module so that we can run the copy.deepcopy() function.
+listVariableTwelve = [
+'rice',
+'ham',
+'tomato',
+'potato',
+'spaghetti',
+'steak',
+'cod',
+'lettuce'
+]
+copiedlistVariableTwelve = copy.deepcopy(listVariableTwelve) #Do a copy of the listVariableTwelve and reference the copy to the new variable copiedlistVariableTwelve.
+
+copiedlistVariableTwelve.append('cucumber') #Now we modify the copiedlistVariableTwelve to store one more value.
+listVariableTwelve[3] = ('apple') #Lets also modify the first list swapping out potato with apple.
+
+print(listVariableTwelve) #Will print out: ['rice', 'ham', 'tomato', 'potato', 'spaghetti', 'steak', 'cod', 'lettuce']
+print(copiedlistVariableTwelve)#Will print out: ['rice', 'ham', 'tomato', 'potato', 'spaghetti', 'steak', 'cod', 'lettuce', 'cucumber']

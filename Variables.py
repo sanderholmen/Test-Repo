@@ -8,6 +8,8 @@ myVariableName = 10
 #We can have mulitple variables pointing to the same value.
 honda = 'my current car'
 opel = honda #This make opel point to honda which points to the string 'my current car' and typing in opel will print out excactly that.
+
+#We can clear (delete value) in a variable with None.
 honda = None #This will clear the honda variable leaving only opel with the "my current car" value.
 
 #We can do multiple changes in one line:

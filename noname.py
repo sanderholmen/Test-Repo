@@ -4,10 +4,10 @@
 #A quick look at the "wihle-statement.
 
 #Print out Hello, there! 5 times.
-# testVar = 0
-# while testVar < 5:
+# varArgument = 0
+# while varArgument < 5:
 #     print('Hello, there!')
-#     testVar = testVar + 1
+#     varArgument = varArgument + 1
 
 # nameVariable = ''
 # while True:
@@ -302,3 +302,56 @@
 #We can also refer to the last inddex (item) in a list by using [-1].
 #[-2] will refer to the second last.
 #[-3] third last and so on..
+#
+# #This defines function with the variable that you find inside it.
+# def fourthFunction1(varArgument): #varArgument is the functions parameter that stores the argument.
+#     varArgument.append('Hi!') #This gets store into the varArgument.
+#     varArgument.append('Hola!') #This gets store into the varArgument.
+#     # print(varArgument)
+#
+# #This is = fourthFunction1(['hello','how,','are','you'])
+# testVar2 = ['hello','how,','are','you'] #Putting the values into a list using the square brackets.
+# fourthFunction1(testVar2) #Calls fourthFunction1 but with the testVar2 variable meaning that it calls the function that appends the 'Hi!' and "Hola!" into the already existing testVar2 variable.
+#
+# testVar3 = ['yo','whats,','up','dude'] #Putting the values into a list using the square brackets.
+# fourthFunction1(testVar3) #Calls fourthFunction1 but with the testVar3 variable meaning that it calls the function that appends the 'Hi!' and "Hola!" into the already existing testVar3 variable.
+#
+# print(testVar2)
+# print(testVar3)
+
+
+#Indexes for dictionaires can use many different datatypes, not just integers.
+#The indexes for dictionaries ar ecalled "keys".
+#A key with its associated value is called a "key value pair".
+
+#Sintax for dictionary Datatype = variable = {'key': 'value', 'newkey': 'newvalue'...}
+dictionaryVar1 = {
+'size':'large',
+'colour': 'brown',
+'length_cm': '15',
+'width': 'wide',
+}
+#We can access every value/item through its key argument.
+dictionaryVar1['size']
+'large'
+#Example use:
+print('The average length of a mans pinky is ' + str(int(dictionaryVar1['length_cm']) /2) + ' centimeters!')
+
+#Unlike lists, all the items are unordered.
+#A list:
+['cat','dog','pig'] == ['dog','pig','cat']
+
+#A dictionary:
+{'1': 'cat', '2': 'dog', '3': 'pig'} == {'2': 'dog', '3': 'pig','1': 'cat'}
+
+
+#Check if key is in dictionary:
+if 'width' in dictionaryVar1 == True:
+    print('It`s here, dude!')
+elif 'width' in dictionaryVar1 == False:
+    print('No width here, dude!')
+
+if dictionaryVar1['size'] == 'large':
+    print('Yeah!')
+else:
+    print('Noo!')
