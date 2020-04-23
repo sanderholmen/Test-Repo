@@ -339,7 +339,7 @@ print('The average length of a mans pinky is ' + str(int(dictionaryVar1['length_
 
 #Unlike lists, all the items are unordered.
 #A list:
-['cat','dog','pig'] == ['dog','pig','cat']
+['cat','dog','pig'] == ['dog','pig','cat'] # This will evaluate to false. Remeber that for lists we often reference the index number to the value ([0] = cat, [1] = dog [2] = pig etc.)
 
 #A dictionary:
 {'1': 'cat', '2': 'dog', '3': 'pig'} == {'2': 'dog', '3': 'pig','1': 'cat'}
