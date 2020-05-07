@@ -87,7 +87,7 @@ print('You are now signed in, my friend!')
 
 #Looking at the "for x in range" function.
 print('I want apples!')
-for aWeirdVariable1 in range (5): #This will run the next code 5 times and each time its ran it will be adding an incremental values raning from 0-4 in the aWeirdVariable1.
+for aWeirdVariable1 in range(5): #This will run the next code 5 times and each time its ran it will be adding an incremental values raning from 0-4 in the aWeirdVariable1.
     if aWeirdVariable1 == 0: #We skip the first value as this is 0 and it does not make sense to the context. Notice the continue statement under.
         continue #Here it is. Since the aWeirdVariable1 is valued at 0 at first, we chose to jump back to the start of the "for" statement.
     print('I want ' + str(aWeirdVariable1))
@@ -161,6 +161,7 @@ else:
 
 #Error handeling and how to work with it.
 #Handeling errors and examples of treating a function as a "black box" when all you want is the output of a function.
+print('Now I`m gonna divide the number 42 in 0, 1, 2, 3 ,5 and 21..!')
 def randomVariable5(divideBy):
     try:
         return 42 / divideBy
@@ -279,7 +280,7 @@ print('We have ' + str(listVariableThree) + ' in this list!')
 print('Write down the name of the item that you want stored in the first_record!')
 listVariableThree[0] = str(input())
 
-print('Thanks, I have now stored ' + str(listVariableThree[0]) + 'in your first_record')
+print('Thanks, I have now stored ' + str(listVariableThree[0]) + ' in your first_record')
 print('Your list now contains ' + str(listVariableThree))
 print('Now tell me what the other two items would be in the second_record and third_record')
 print('Type the first item and then press enter, then the second item followed by another enter!')

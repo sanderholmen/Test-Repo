@@ -1,7 +1,11 @@
-# In modern days, login solutions will not include any clear text handeling of passwords.
-# Databases usually stores a hash value that can only be calculated one way, and that is from the users input (password).
-# Anyway, to understand the concept, this is a fairly simple login script.
-# #Super simple and insecure login
+# This is only for learning sake.
+# In modern days, login solutions will never
+# include any clear text handeling of passwords.
+# Databases usually stores a hash value that
+# can only be calculated one way,
+# and that is from the users input (password).
+# Anyway, to understand the concept;
+# this is a fairly simple login script.
 print('Please type in your username!')
 print('Hint: its "emil"!')
 usernameVariable1 = str(input())
