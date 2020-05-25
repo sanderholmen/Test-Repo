@@ -25,5 +25,7 @@ randomVariable = 0
 while randomVariable < 5:
     randomVariable = randomVariable +1
     if randomVariable == 3:
-        continue # continue statement makes the computer jump back to the start of the while statement ignoring lines of code that would be after.
+        continue # continue statement makes the computer
+        # jump back to the start of the while statement
+        # ignoring lines of code that would be after.
     print('randomVariable is '+str(randomVariable))

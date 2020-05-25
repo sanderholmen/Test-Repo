@@ -24,7 +24,8 @@ elif theCorrectAnswer == myAnswer + 1 or theCorrectAnswer == myAnswer - 1:
         elif theCorrectAnswer == my2ndAnswer:
             print('Good job!')
             break
-        elif theCorrectAnswer != my2ndAnswer or theCorrectAnswer != my2ndAnswer + 1 or the2ndCorrectAnswer != my2ndAnswer - 1:
+        elif theCorrectAnswer != my2ndAnswer or theCorrectAnswer != my2ndAnswer + 1 or \
+		the2ndCorrectAnswer != my2ndAnswer - 1:
             print('You are to far off, ' + nameVar + '.. Good bye, my friend!')
             break
 else:

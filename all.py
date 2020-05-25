@@ -28,7 +28,9 @@ randomVariable = 0
 while randomVariable < 5:
     randomVariable = randomVariable +1
     if randomVariable == 3:
-        continue # continue statement makes the computer jump back to the start of the while statement ignoring lines of code that would be after.
+        continue # continue statement makes the computer jump back
+        # to the start of the while statement ignoring lines
+        # of code that would be after.
     print('randomVariable is '+str(randomVariable))
 
 
@@ -55,7 +57,8 @@ elif theCorrectAnswer == myAnswer + 1 or theCorrectAnswer == myAnswer - 1:
         elif theCorrectAnswer == my2ndAnswer:
             print('Good job!')
             break
-        elif theCorrectAnswer != my2ndAnswer or theCorrectAnswer != my2ndAnswer + 1 or the2ndCorrectAnswer != my2ndAnswer - 1:
+        elif theCorrectAnswer != my2ndAnswer or theCorrectAnswer != my2ndAnswer \
+        + 1 or the2ndCorrectAnswer != my2ndAnswer - 1:
             print('You are to far off, my friend!')
             break
 else:
@@ -87,15 +90,21 @@ print('You are now signed in, my friend!')
 
 #Looking at the "for x in range" function.
 print('I want apples!')
-for aWeirdVariable1 in range(5): #This will run the next code 5 times and each time its ran it will be adding an incremental values raning from 0-4 in the aWeirdVariable1.
-    if aWeirdVariable1 == 0: #We skip the first value as this is 0 and it does not make sense to the context. Notice the continue statement under.
-        continue #Here it is. Since the aWeirdVariable1 is valued at 0 at first, we chose to jump back to the start of the "for" statement.
+for aWeirdVariable1 in range(5): #This will run the next code 5 times
+# and each time its ran it will be adding an incremental values ranging
+# from 0-4 in the aWeirdVariable1.
+    if aWeirdVariable1 == 0: #We skip the first value as this is 0 and
+    # it does not make sense to the context.
+    # Notice the continue statement under.
+        continue # Here it is. Since the aWeirdVariable1 is valued
+        # at 0 at first, we chose to jump back to the start of the "for" statement.
     print('I want ' + str(aWeirdVariable1))
 print('I want all apples!')
 
 
 #Just looking at the for function and a usecase for it.
-#It basically just start with the number 0 and adds the sum of the 0 (aTotal1) + 0 and then, 1 and then 2... to 13
+#It basically just start with the number 0 and adds the sum
+# of the 0 (aTotal1) + 0 and then, 1 and then 2... to 13
 #(counting from 0 to 13 = 14) (addedToTotal1).
 aTotal1 = 0
 for addedToTotal1 in range (14):
@@ -115,19 +124,23 @@ def firstFunction():
 print('Type the number 1, 2 or 3!')
 
 randomVariable2 = int(input())
-if randomVariable2 == int(1) or randomVariable2 == int(2) or randomVariable2 == int(3):
+if randomVariable2 == int(1) or randomVariable2 == int(2) or\
+randomVariable2 == int(3):
     firstFunction()
 else:
-    while randomVariable2 != int(1) or randomVariable2 != int(2) or randomVariable2 != int(3):
+    while randomVariable2 != int(1) or randomVariable2 != int(2) or \
+    randomVariable2 != int(3):
         print('You did not type 1, 2 or 3!')
         print('Please type 1, 2 or 3!')
         randomVariable2 = int(input())
-        if randomVariable2 == int(1) or randomVariable2 == int(2) or randomVariable2 == int(3):
+        if randomVariable2 == int(1) or randomVariable2 == int(2) or \
+        randomVariable2 == int(3):
             firstFunction()
             break
 
 
-# Using a function in a simple math question to qoute the answer and using an if statement to decide which output to run.
+# Using a function in a simple math question to qoute the answer
+# and using an if statement to decide which output to run.
 def secondFunction():
     if randomVariable3 == int(4):
         print('That is correct, ' + str(int(randomVariable3)) + ' is the answer!')
@@ -137,7 +150,8 @@ def secondFunction():
 
 print('What is 2 + 2')
 randomVariable3 = int(input())
-if randomVariable3 == int(4): #You can see that both lines will be run, but the difference is the if statement inside "secondFunction"`s if statement.`
+if randomVariable3 == int(4): # You can see that both lines will be run,
+# but the difference is the if statement inside "secondFunction"`s if statement.`
     secondFunction()
 else:
     secondFunction()
@@ -148,7 +162,9 @@ else:
 print('Type 1, 2 or any other number!')
 randomVariable4 = int(input())
 
-def thirdFunction(randomVariable4):# The word inside the parentheses is called a paramater. A parameter is a variable that an argument is stored in.
+# The word inside the parentheses is called a paramater.
+# A parameter is a variable that an argument is stored in.
+def thirdFunction(randomVariable4):
     print('This ' +  randomVariable4)
 
 if randomVariable4 == int(1):
@@ -156,19 +172,24 @@ if randomVariable4 == int(1):
 elif randomVariable4 == int(2):
     thirdFunction('parameter has a value of 2!')
 else:
-    thirdFunction('parameter has a value of any other number you typed which in this case was ' + str(randomVariable4) + '!')
+    thirdFunction('parameter has a value of any other number\
+ you typed which in this case was ' + str(randomVariable4) + '!')
 
 
-#Error handeling and how to work with it.
-#Handeling errors and examples of treating a function as a "black box" when all you want is the output of a function.
+# Error handeling and how to work with it.
+# Handeling errors and examples of treating a function as a "black box"
+# when all you want is the output of a function.
 print('Now I`m gonna divide the number 42 in 0, 1, 2, 3 ,5 and 21..!')
 def randomVariable5(divideBy):
     try:
         return 42 / divideBy
     except ZeroDivisionError:
         print('No, dont divide by zero my friend!')
-#Since dividing by zero prints an error message, notice the first print statement (0); the program will output an error saying ZeroDivisionError: division by zero.
-#To overcome this so that the program can continue, you can add in "try and "except"" statements.
+# Since dividing by zero prints an error message, notice the
+# first print statement (0); the program will output an error
+# saying ZeroDivisionError: division by zero.
+# To overcome this so that the program can continue,
+# you can add in "try and "except"" statements.
 print(randomVariable5(0))
 print(randomVariable5(1))
 print(randomVariable5(2))
@@ -177,8 +198,9 @@ print(float(randomVariable5(5)))
 print(int(randomVariable5(21)))
 
 
-#Another example..
-#This program lets you chose a number, but what if you type a string of characters instead?
+# Another example..
+# This program lets you chose a number, but what if you type a
+# string of characters instead?
 print('Type a number, please!')
 randomVariable6 = input()
 if int(randomVariable6) > 5:
@@ -186,9 +208,10 @@ if int(randomVariable6) > 5:
 else:
     print('Thats a low number!')
 
-#If you type anything other than integers (number) it will crash with the error message "ValueError: invalid literal for int() with base 10: 'as'".
-#This program fixes this by using the try and except statements.
-#This is a good example of the use of an input validation.
+# If you type anything other than integers (number) it will crash with
+# the error message "ValueError: invalid literal for int() with base 10: 'as'".
+# This program fixes this by using the try and except statements.
+# This is a good example of the use of an input validation.
 print('Type a number, please!')
 randomVariable7 = input()
 
@@ -197,23 +220,32 @@ try:
         print('Thats a high number!')
     else:
         print('Thats a low number!')
-except ValueError: #You can see that we put the first line in the error output in the except statement making the program run the lines under if this error appears.
+except ValueError: # You can see that we put the first line in the
+# error output in the except statement making the program run
+# the lines under if this error appears.
     print('You did not type in a number!')
 
 
 
-    #Learning about the random function in python. A simple example usage would be a guessing game..
-#I will also implement the "in range" function to limit the amount of tries the user have to guess the correct answer.
-#Using the random module to make a guessing game would look something like this..
+    # Learning about the random function in python.
+# A simple example usage would be a guessing game..
+# I will also implement the "in range" function to limit
+# the amount of tries the user have to guess the correct answer.
+# Using the random module to make a guessing game would look something like this..
 import random #We import the random module..
 print('This is a guessing game!')
-secretVariable1 = random.randint(1, 20) #We set the variable "secretVariable1" to a random number between 1 and 20..
+# We set the variable "secretVariable1" to a random number between 1 and 20..
+secretVariable1 = random.randint(1, 20)
 print('Guess a number between 1 and 20!')
 
-for guessRemainingVariable in range(1, 7): #We set a range of 0 to 6 (not counting 7 as you remember) giving us 1 to 6 -> giving us 6 tries.
-                                           #This will run one line at a time in the for loop up to 6 times unless you guess correct.
+# We set a range of 0 to 6 (not counting 7 as you remember)
+# giving us 1 to 6 -> giving us 6 tries.
+# This will run one line at a time in the for loop up
+# to 6 times unless you guess correct.
+for guessRemainingVariable in range(1, 7):
     print('Now, guess the number!')
-    guessVariable1 = int(input()) #We store the number that we guess as an integer in the "guessVariable1"..
+# We store the number that we guess as an integer in the "guessVariable1"..
+    guessVariable1 = int(input())
     if guessVariable1 < secretVariable1 and guessRemainingVariable <= 5: #If number we guess is lower than the number that is random and we have counted less than 0-5 (6 tries)..
         print('You have ' + str(int(6 - (guessRemainingVariable))) + ' tries left..!')
         print('To low, my friend, try again..!')
@@ -230,8 +262,8 @@ else:
 
 
 
-#Learning the list function..
-#Lists can hold multiple values. It ca neveb hold lists inside of a list.
+# Learning the list function..
+# Lists can hold multiple values. It ca neveb hold lists inside of a list.
 listVariableTwo = [['norway','sweden','denmark'],['oslo','stockholm','copenhagen']] #The syntax is basically [[','],[',']]
 # listVariableTwo #This will output: [['norway', 'sweden', 'denmark'], ['oslo', 'stockholm', 'copenhagen']]
 # listVariableTwo [0] #While this will output: ['norway', 'sweden', 'denmark']
@@ -244,15 +276,15 @@ print('1 = ' + str(listVariableTwo [1])) #This prints out the second list inside
 print('Type 0 or 1') #Lets ask user to type 0 or 1.
 userInput1 = int(input()) #We store the value in this variable.
 
-#First function is chosing which list to view.
-if userInput1 == 0: #If 0 was typed, we run this block.
-    print(listVariableTwo[0]) #We print out the first list of the two.
+# First function is chosing which list to view.
+if userInput1 == 0: # If 0 was typed, we run this block.
+    print(listVariableTwo[0]) # We print out the first list of the two.
     listVariableTwo = listVariableTwo[0] #Now we also set the variable to only hold the first list before we move on to the next function.
-elif userInput1 == 1:#If 1 was typed, we run this block.
-    print(listVariableTwo[1]) #We print out the second list of the two.
-    listVariableTwo = listVariableTwo[1] #Now we also set the variable to only hold the second list before we move on to the next function.
+elif userInput1 == 1:# If 1 was typed, we run this block.
+    print(listVariableTwo[1]) # We print out the second list of the two.
+    listVariableTwo = listVariableTwo[1] # Now we also set the variable to only hold the second list before we move on to the next function.
 else:
-    print('You did not type 0 or 1..') #If the user is imbecile and dont understand the instruction to type 0 or 1, well then.....
+    print('You did not type 0 or 1..') # If the user is imbecile and dont understand the instruction to type 0 or 1, well then.....
 
 #The next function is chosing one item/value inside the selected list.
 print('0 = ' + str(listVariableTwo [0])) #This prints out the first item in the previously selected list previous
