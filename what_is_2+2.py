@@ -28,5 +28,3 @@ elif theCorrectAnswer == myAnswer + 1 or theCorrectAnswer == myAnswer - 1:
 else:
 	print('Wrong answer!')
 print('Good bye ' + nameVar + '!')
-
-# test line for commit attempt
