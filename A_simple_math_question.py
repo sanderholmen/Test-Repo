@@ -29,5 +29,5 @@ elif theCorrectAnswer == myAnswer + 1 or theCorrectAnswer == myAnswer - 1:
             print('You are to far off, ' + nameVar + '.. Good bye, my friend!')
             break
 else:
-	print('Wrong answer!')
+	print('Wrong answer, stupid!')
 print('Good bye ' + nameVar + '!')
